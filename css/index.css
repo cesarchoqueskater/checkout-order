@@ -68,6 +68,23 @@ input {
     box-sizing: border-box;
     block-size: 64px;
     inline-size: 100%;
+    margin-block-start: 8px;
+    margin-block-end: 32px;
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
+}
+
+.extra-information-credit-card {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.extra-information-date {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    align-items: center;
 }
 
 @media screen and (min-width:1440px) {
