@@ -13,7 +13,7 @@
 }
 
 body {
-    color: var(--white);
+    color: var(--black);
     background-color: var(--bg-blue);
     font: var(--body-18medium);
     margin: 0;
@@ -27,4 +27,58 @@ body {
     margin-block: 80px;
     border: 4px solid red;
     height: 100vh;
+}
+
+.order-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(328px, 513px));
+    gap: 0;
+    justify-content: center;
+}
+
+.details-order {
+    border: 4px solid green;
+    background-color: var(--bg);
+}
+
+.card-order {
+    padding-inline: 16px;
+    padding-block: 40px;
+    border: 5px solid black;
+}
+
+.order-summary {
+    border: 4px solid yellow;
+    background-color: var(--bg);
+}
+
+.title-card {
+    font: var(--subtitle-20medium)
+}
+
+label {
+    color: var(--grey);
+    font: var(--body-16medium);
+}
+
+input {
+    background-color: #E2E8F0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    block-size: 64px;
+    inline-size: 100%;
+}
+
+@media screen and (min-width:1440px) {
+    .order-container {
+        display: grid;
+        grid-template-columns: 777px 513px;
+        gap: 30px;
+    }
+    .card-order {
+        padding-inline: 173px;
+        padding-block: 40px;
+        border: 5px solid black;
+    }
 }
