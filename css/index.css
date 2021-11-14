@@ -197,6 +197,36 @@ input {
     margin-block-end: 8px;
 }
 
+.card-selection div {
+    padding-block: 16px;
+    padding-inline: 16px;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: var(--body-16medium);
+    margin-block-end: 8px;
+    cursor: pointer;
+}
+
+.card-selection div p {
+    inline-size: 267px;
+    margin: 0;
+}
+
+.secondOption,
+.thirdOption {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.information-storage p {
+    line-height: 60px;
+    block-size: 60px;
+}
+
 @media screen and (min-width:1024px) {
     .order-container {
         gap: 30px;
