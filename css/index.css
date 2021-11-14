@@ -44,6 +44,7 @@ body {
     /* border-radius: 10px; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    height: fit-content;
 }
 
 .card-order {
@@ -58,6 +59,7 @@ body {
     /* border-radius: 10px; */
     border-end-start-radius: 10px;
     border-end-end-radius: 10px;
+    height: fit-content;
 }
 
 .card-summary {
@@ -166,6 +168,35 @@ input {
     justify-content: space-between;
 }
 
+.product-cupon {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: space-between;
+    margin-block-start: 8px;
+}
+
+.input-text-cupon {}
+
+.btn-aplicate-cupon {
+    padding-inline: 56px;
+    block-size: 64px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 10px;
+}
+
+.valueCupon {
+    inline-size: 243px;
+    block-size: 64px;
+    background-color: var(--grey10);
+    margin-block: 0px;
+}
+
+.labelValueCupon {
+    margin-block-end: 8px;
+}
+
 @media screen and (min-width:1024px) {
     .order-container {
         gap: 30px;
@@ -188,7 +219,6 @@ input {
     .order-container {
         display: grid;
         grid-template-columns: 777px 513px;
-        /* gap: 30px; */
     }
     .card-order {
         padding-inline: 173px;
