@@ -52,6 +52,22 @@ body {
     height: fit-content;
 }
 
+.card-order[aria-selected="true"] {
+    display: block;
+}
+
+.card-order[aria-selected="false"] {
+    display: none;
+}
+
+.button-options[aria-selected="true"] {
+    display: flex;
+}
+
+.button-options[aria-selected="false"] {
+    display: none;
+}
+
 .section-back {
     cursor: pointer;
     display: none;
@@ -203,15 +219,12 @@ p {
 
 .btn-product {
     background-color: var(--grey10);
-    color: var(--grey);
-    padding-inline: 14px;
-    padding-block: 12px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     box-sizing: border-box;
-    font-weight: bold;
-    font-size: 16px;
+    block-size: 40px;
+    inline-size: 40px;
 }
 
 .content-product-information {
