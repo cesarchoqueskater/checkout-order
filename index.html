@@ -101,10 +101,10 @@
                         <div class="container-image">
                             <img src="./images/Macbook.png" alt="mackbook-img">
                         </div>
-                        <div class="product-information">
+                        <div class="content-product-information">
                             <div class="name-price">
-                                <h3>MacBook Pro 14”</h3>
-                                <p>$52,999.00</p>
+                                <h3 class="title-product">MacBook Pro 14”</h3>
+                                <p class="subtitle-20bold">$52,999.00</p>
                             </div>
                             <div class="add-minus">
                                 <button class="btn-product btn-minus">-</button>
@@ -112,28 +112,32 @@
                                 <button class="btn-product btn-add">+</button>
                             </div>
                         </div>
-                        <div class="d-flex sub-total">
-                            <p>Sub Total</p>
-                            <p>$52,999.00</p>
-                        </div>
-                        <div class="d-flex type-send">
-                            <p>Envio</p>
-                            <p>Gratis</p>
-                        </div>
-                        <div class="d-flex total">
-                            <p>Total</p>
-                            <p>$52,999.00</p>
-                        </div>
-                        <span class="labelValueCupon" id="valueCupon">Tarjeta de regalo / código de descuento</span>
-                        <div class="product-cupon">
-                            <div class="input-text-cupon">
-                                <input type="text" name="valueCupon" class="valueCupon" id="valueCupon">
+                        <div class="content-amount">
+                            <div class="d-flex sub-total">
+                                <p class="body-18medium text-grey">Sub Total</p>
+                                <span class="subtitle-20medium">$52,999.00</span>
                             </div>
-                            <button class="btn btn-aplicate-cupon">Aplicar</button>
+                            <div class="d-flex type-send">
+                                <p class="body-18medium text-grey">Envio</p>
+                                <span class="subtitle-20medium text-primary ">Gratis</span>
+                            </div>
+                            <div class="d-flex total">
+                                <p class="subtitle-20bold text-grey">Total</p>
+                                <span class="subtitle-20medium">$52,999.00</span>
+                            </div>
                         </div>
-                        <div class="card-selection information-processor">
-                            <h3>Sistema en chip (procesador)</h3>
-                            <div class="firstOption">
+                        <div class="content-product-cupon">
+                            <span class="labelValueCupon body-16medium text-grey" id="valueCupon">Tarjeta de regalo / código de descuento</span>
+                            <div class="product-cupon">
+                                <div class="input-text-cupon">
+                                    <input type="text" name="valueCupon" class="valueCupon" id="valueCupon">
+                                </div>
+                                <button class="btn btn-aplicate-cupon">Aplicar</button>
+                            </div>
+                        </div>
+                        <div class="content-selection information-processor">
+                            <h3 class="title-content-selection">Sistema en chip (procesador)</h3>
+                            <div class="firstOption" aria-selected="true">
                                 <p>Chip M1 Pro de Apple con CPU de 8 núcleos, GPU de 14 núcleos y Neural Engine de 16 núcleos</p>
                             </div>
                             <div class="secondOption">
@@ -145,9 +149,9 @@
                                 <span>+ $8,000.00</span>
                             </div>
                         </div>
-                        <div class="card-selection information-storage">
-                            <h3>Almacenamiento</h3>
-                            <div class="firstOption">
+                        <div class="content-selection information-storage">
+                            <h3 class="title-content-selection">Almacenamiento</h3>
+                            <div class="firstOption" aria-selected="true">
                                 <p>Almacenamiento SSD de 512 GB</p>
                             </div>
                             <div class="secondOption">

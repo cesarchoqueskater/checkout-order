@@ -22,6 +22,14 @@ body {
     padding: 0;
 }
 
+.text-grey {
+    color: var(--grey);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
 .wrapper {
     display: block;
     margin: auto;
@@ -53,6 +61,10 @@ body {
     /* border: 5px solid black; */
 }
 
+.personal-information {
+    margin-block-start: 32px;
+}
+
 .order-summary {
     /* border: 4px solid yellow; */
     background-color: var(--bg);
@@ -68,7 +80,13 @@ body {
 }
 
 .title-card {
-    font: var(--subtitle-20medium)
+    font: var(--subtitle-20medium);
+    margin: 0px;
+}
+
+.title-product {
+    margin-block-end: 16px;
+    font: var(--subtitle-20medium);
 }
 
 label {
@@ -87,6 +105,10 @@ input {
     margin-block-end: 32px;
     padding-inline-start: 16px;
     padding-inline-end: 16px;
+}
+
+p {
+    margin: 0px;
 }
 
 .extra-information-credit-card {
@@ -137,6 +159,7 @@ input {
 .container-image {
     text-align: center;
     background-color: var(--white);
+    margin-block-start: 24px;
 }
 
 .btn-product {
@@ -152,11 +175,12 @@ input {
     font-size: 16px;
 }
 
-.product-information {
+.content-product-information {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    margin-block-end: 40px;
 }
 
 .count-product {
@@ -166,6 +190,8 @@ input {
 .d-flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-block-end: 24px;
 }
 
 .product-cupon {
@@ -197,10 +223,15 @@ input {
     margin-block-end: 8px;
 }
 
-.card-selection div {
+.content-selection {
+    margin-block-start: 24px;
+    margin-block-end: 24px;
+}
+
+.content-selection div {
     padding-block: 16px;
     padding-inline: 16px;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--grey);
     border-radius: 4px;
     box-sizing: border-box;
     font: var(--body-16medium);
@@ -208,9 +239,13 @@ input {
     cursor: pointer;
 }
 
-.card-selection div p {
+.content-selection div p {
     inline-size: 267px;
     margin: 0;
+}
+
+.title-content-selection {
+    margin-block-end: 8px;
 }
 
 .secondOption,
@@ -222,16 +257,44 @@ input {
     gap: 16px;
 }
 
+.information-storage {
+    margin-block-end: 0px;
+}
+
 .information-storage p {
     line-height: 60px;
     block-size: 60px;
+}
+
+.information-processor div[aria-selected="true"] {
+    border: 2px solid var(--primary);
+}
+
+.information-storage div[aria-selected="true"] {
+    border: 2px solid var(--primary);
+}
+
+.subtitle-20medium {
+    font: var(--subtitle-20medium);
+}
+
+.subtitle-20bold {
+    font: var(--subtitle-20bold);
+}
+
+.body-16medium {
+    font: var(--body-16medium);
+}
+
+.body-18medium {
+    font: var(--body-18medium);
 }
 
 @media screen and (min-width:1024px) {
     .order-container {
         gap: 30px;
     }
-    .product-information {
+    .content-product-information {
         display: flex;
         align-items: center;
         flex-direction: row;
@@ -253,6 +316,7 @@ input {
     .card-order {
         padding-inline: 173px;
         padding-block: 40px;
+        /* border: 1px solid red; */
     }
     .card-summary {
         padding-inline: 40px;
