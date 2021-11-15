@@ -33,8 +33,9 @@ body {
 .wrapper {
     display: block;
     margin: auto;
-    max-inline-size: 1320px;
+    /* max-inline-size: 1320px; */
     margin-block: 80px;
+    margin-inline: 16px;
     height: 100vh;
 }
 
@@ -79,17 +80,11 @@ body {
     position: absolute;
 }
 
+.icon-check {
+    display: none;
+}
+
 .section-account::after {
-    content: url(../icons/Minus.svg);
-    margin-inline-start: 17px;
-}
-
-.section-send::before {
-    content: url(../icons/Minus.svg);
-    margin-inline-end: 17px;
-}
-
-.section-send::after {
     content: url(../icons/Minus.svg);
     margin-inline-start: 17px;
 }
@@ -233,6 +228,7 @@ p {
     justify-content: space-between;
     flex-direction: column;
     margin-block-end: 40px;
+    gap: 24px;
 }
 
 .count-product {
@@ -248,9 +244,9 @@ p {
 
 .product-cupon {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 24px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-block-start: 8px;
 }
 
@@ -265,7 +261,7 @@ p {
 }
 
 .valueCupon {
-    inline-size: 243px;
+    /* max-inline-size: 243px; */
     block-size: 64px;
     background-color: var(--grey10);
     margin-block: 0px;
@@ -291,11 +287,6 @@ p {
     cursor: pointer;
 }
 
-.content-selection div p {
-    inline-size: 267px;
-    margin: 0;
-}
-
 .title-content-selection {
     margin-block-end: 8px;
 }
@@ -303,9 +294,7 @@ p {
 .secondOption,
 .thirdOption {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     gap: 16px;
 }
 
@@ -359,6 +348,28 @@ p {
     .order-summary {
         border-radius: 10px;
     }
+    .secondOption,
+    .thirdOption {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+    .content-selection div p {
+        inline-size: 267px;
+        margin: 0;
+    }
+    .product-cupon {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        justify-content: space-between;
+        margin-block-start: 8px;
+    }
+    .valueCupon {
+        inline-size: 243px;
+    }
 }
 
 @media screen and (min-width:1440px) {
@@ -375,6 +386,17 @@ p {
         padding-block: 40px;
     }
     .section-back {
+        display: block;
+    }
+    .section-send::before {
+        content: url(../icons/Minus.svg);
+        margin-inline-end: 17px;
+    }
+    .section-send::after {
+        content: url(../icons/Minus.svg);
+        margin-inline-start: 17px;
+    }
+    .icon-check {
         display: block;
     }
 }
