@@ -35,7 +35,6 @@ body {
     margin: auto;
     max-inline-size: 1320px;
     margin-block: 80px;
-    /* border: 4px solid red; */
     height: 100vh;
 }
 
@@ -47,18 +46,60 @@ body {
 }
 
 .details-order {
-    /* border: 4px solid green; */
     background-color: var(--bg);
-    /* border-radius: 10px; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height: fit-content;
 }
 
+.section-back {
+    cursor: pointer;
+    display: none;
+}
+
+.icon-back {
+    top: 40px;
+    left: 40px;
+    position: absolute;
+}
+
+.section-account::after {
+    content: url(../icons/Minus.svg);
+    margin-inline-start: 17px;
+}
+
+.section-send::before {
+    content: url(../icons/Minus.svg);
+    margin-inline-end: 17px;
+}
+
+.section-send::after {
+    content: url(../icons/Minus.svg);
+    margin-inline-start: 17px;
+}
+
+.section-pay::before {
+    content: url(../icons/Minus.svg);
+    margin-inline-end: 17px;
+}
+
 .card-order {
     padding-inline: 16px;
     padding-block: 40px;
-    /* border: 5px solid black; */
+}
+
+.card-order-page {
+    block-size: 24 px;
+    padding-inline: 173px;
+    padding-block-start: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 13px;
+}
+
+.card-order-page p {
+    display: flex;
 }
 
 .personal-information {
@@ -66,9 +107,7 @@ body {
 }
 
 .order-summary {
-    /* border: 4px solid yellow; */
     background-color: var(--bg);
-    /* border-radius: 10px; */
     border-end-start-radius: 10px;
     border-end-end-radius: 10px;
     height: fit-content;
@@ -301,6 +340,7 @@ p {
         justify-content: space-between;
     }
     .details-order {
+        position: relative;
         border-radius: 10px;
     }
     .order-summary {
@@ -316,10 +356,12 @@ p {
     .card-order {
         padding-inline: 173px;
         padding-block: 40px;
-        /* border: 1px solid red; */
     }
     .card-summary {
         padding-inline: 40px;
         padding-block: 40px;
+    }
+    .section-back {
+        display: block;
     }
 }
