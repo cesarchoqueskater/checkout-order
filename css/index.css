@@ -176,6 +176,7 @@ p {
 
 .button-options {
     display: flex;
+    display: -webkit-box;
     flex-direction: row;
     justify-content: right;
     margin-block-start: 5px;
