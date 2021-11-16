@@ -1,0 +1,41 @@
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding-block: 20px;
+    padding-inline: 27px;
+    cursor: pointer;
+    background-color: var(--bg);
+}
+
+.btn-login,
+.btn-details-send,
+.btn-continue-pay,
+.btn-pay-order {
+    background-color: var(--primary);
+    color: var(--white10);
+}
+
+.btn-details-send,
+.btn-continue-pay,
+.btn-pay-order {
+    padding-inline: 56px;
+    padding-block: 20px;
+}
+
+.btn-option-product {
+    background-color: var(--grey10);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    block-size: 40px;
+    inline-size: 40px;
+}
+
+.btn-aplicate-cupon {
+    padding-inline: 56px;
+    block-size: 64px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 10px;
+}

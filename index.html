@@ -15,9 +15,9 @@
 <body>
     <div class="content">
         <div class="wrapper">
-            <div class="order-container">
-                <div class="details-order">
-                    <div class="section-back">
+            <div class="container">
+                <section class="details-order-content">
+                    <div class="section-icon-back">
                         <img class="icon-back" src="./icons/chevron-left.svg" alt="icon-back">
                     </div>
                     <div class="card-order-page">
@@ -30,19 +30,19 @@
                     <div class="card-order details-account" aria-selected="true">
                         <h3 class="title-card">Detalles de la cuenta</h3>
                         <div class="personal-information">
-                            <div class="input-text">
+                            <div class="content-input">
                                 <label for="email">Correo electronico</label>
                                 <input type="email" name="email" id="email">
                             </div>
-                            <div class="input-text">
+                            <div class="content-input">
                                 <label for="password">Contraseña</label>
                                 <input type="password" name="password" id="password">
                             </div>
-                            <div class="button-options" aria-selected="true">
+                            <div class="content-button" aria-selected="true">
                                 <button class="btn btn-register">Registrarse</button>
                                 <button class="btn btn-login">Iniciar Sesión</button>
                             </div>
-                            <div class="button-options" aria-selected="false">
+                            <div class="content-button" aria-selected="false">
                                 <button class="btn btn-cancel">Cancelar orden</button>
                                 <button class="btn btn-details-send">Detalles de envió</button>
                             </div>
@@ -51,19 +51,19 @@
                     <div class="card-order details-send" aria-selected="false">
                         <h3 class="title-card">Detalles de envió</h3>
                         <div class="personal-information">
-                            <div class="input-text">
+                            <div class="content-input">
                                 <label for="numberAddress">Primera línea de dirección</label>
                                 <input type="text" name="numberAddress" id="numberAddress">
                             </div>
-                            <div class="input-text">
+                            <div class="content-input">
                                 <label for="address">Nombre de la calle</label>
                                 <input type="text" name="address" id="address">
                             </div>
-                            <div class="input-text">
+                            <div class="content-input">
                                 <label for="zipcode">Código postal</label>
                                 <input type="text" name="zipcode" id="zipcode">
                             </div>
-                            <div class="button-options">
+                            <div class="content-button">
                                 <button class="btn btn-cancel">Cancelar orden</button>
                                 <button class="btn btn-continue-pay">Continuar al pago</button>
                             </div>
@@ -72,54 +72,53 @@
                     <div class="card-order details-pay" aria-selected="false">
                         <h3 class="title-card">Detalles del pago</h3>
                         <div class="personal-information">
-                            <div class="input-text">
+                            <div class="content-input">
                                 <label for="nameCreditCard">Nombre en la tarjeta</label>
                                 <input type="text" name="nameCreditCard" id="nameCreditCard">
                             </div>
-                            <div class="input-text">
+                            <div class="content-input">
                                 <label for="numberCreditCard">Número de tarjeta</label>
                                 <input type="text" name="numberCreditCard" id="numberCreditCard">
                             </div>
                             <div class="extra-information-credit-card">
                                 <div class="extra-information-date">
-                                    <div class="input-text">
+                                    <div class="content-input">
                                         <label for="month">Mes</label>
                                         <input type="text" name="month" id="month">
                                     </div>
                                     <span>/</span>
-                                    <div class="input-text">
+                                    <div class="content-input">
                                         <label for="year">Año</label>
                                         <input type="text" name="year" id="year">
                                     </div>
-
                                 </div>
-                                <div class="input-text">
+                                <div class="content-input">
                                     <label for="cvc">CVC</label>
                                     <input type="text" name="cvc" id="cvc">
                                 </div>
                             </div>
-                            <div class="button-options">
+                            <div class="content-button">
                                 <button class="btn btn-cancel">Cancelar orden</button>
                                 <button class="btn btn-pay-order">Pagar ahora</button>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="order-summary">
+                </section>
+                <section class="order-summary-content">
                     <div class="card-summary">
                         <h3 class="title-card">Resumen de la Orden</h3>
-                        <div class="container-image">
+                        <div class="container-product-img">
                             <img src="./images/Macbook.png" alt="mackbook-img">
                         </div>
                         <div class="content-product-information">
-                            <div class="name-price">
+                            <div class="content-product-name-price">
                                 <h3 class="title-product">MacBook Pro 14”</h3>
                                 <p class="subtitle-20bold">$52,999.00</p>
                             </div>
-                            <div class="add-minus">
-                                <button class="btn-product btn-minus"><img src="./icons/Minus.svg" alt="icon-minus"></button>
-                                <span class="count-product">1</span>
-                                <button class="btn-product btn-add"><img src="./icons/add-line.svg" alt="icon-add"></button>
+                            <div class="content-product-count">
+                                <button class="btn-option-product btn-minus"><img src="./icons/Minus.svg" alt="icon-minus"></button>
+                                <span class="count-product-value">1</span>
+                                <button class="btn-option-product btn-add"><img src="./icons/add-line.svg" alt="icon-add"></button>
                             </div>
                         </div>
                         <div class="content-amount">
@@ -137,40 +136,40 @@
                             </div>
                         </div>
                         <div class="content-product-cupon">
-                            <span class="labelValueCupon body-16medium text-grey" id="valueCupon">Tarjeta de regalo / código de descuento</span>
+                            <span class="label-value-cupon body-16medium text-grey" id="value-cupon">Tarjeta de regalo / código de descuento</span>
                             <div class="product-cupon">
-                                <div class="input-text-cupon">
-                                    <input type="text" name="valueCupon" class="valueCupon" id="valueCupon">
+                                <div class="content-input-cupon">
+                                    <input type="text" name="value-cupon" class="value-cupon" id="label-value-cupon">
                                 </div>
                                 <button class="btn btn-aplicate-cupon">Aplicar</button>
                             </div>
                         </div>
-                        <div class="content-selection information-processor">
-                            <h3 class="title-content-selection">Sistema en chip (procesador)</h3>
-                            <div class="firstOption" aria-selected="true">
+                        <div class="content-characteristic information-processor">
+                            <h3 class="title-content">Sistema en chip (procesador)</h3>
+                            <div class="first-option" aria-selected="true">
                                 <p>Chip M1 Pro de Apple con CPU de 8 núcleos, GPU de 14 núcleos y Neural Engine de 16 núcleos</p>
                             </div>
-                            <div class="secondOption">
+                            <div class="second-option">
                                 <p>Chip M1 Pro de Apple con CPU de 10 núcleos, GPU de 14 núcleos y Neural Engine de 16 núcleos</p>
                                 <span>+ $5,500.00</span>
                             </div>
-                            <div class="thirdOption">
+                            <div class="third-option">
                                 <p>Chip M1 Pro de Apple con CPU de 10 núcleos, GPU de 16 núcleos y Neural Engine de 16 núcleos</p>
                                 <span>+ $8,000.00</span>
                             </div>
                         </div>
-                        <div class="content-selection information-storage">
-                            <h3 class="title-content-selection">Almacenamiento</h3>
-                            <div class="firstOption" aria-selected="true">
+                        <div class="content-characteristic information-storage">
+                            <h3 class="title-content">Almacenamiento</h3>
+                            <div class="first-option" aria-selected="true">
                                 <p>Almacenamiento SSD de 512 GB</p>
                             </div>
-                            <div class="secondOption">
+                            <div class="second-option">
                                 <p>Almacenamiento SSD de 1 TB</p>
                                 <span>+ $5,500.00</span>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </div>

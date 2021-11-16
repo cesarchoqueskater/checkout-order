@@ -1,0 +1,77 @@
+.section-icon-back {
+    cursor: pointer;
+    display: none;
+}
+
+.card-order {
+    padding-inline: 16px;
+    padding-block: 40px;
+}
+
+.card-order-page {
+    block-size: 24px;
+    padding-inline: 173px;
+    padding-block-start: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 13px;
+}
+
+.card-order-page p {
+    display: flex;
+}
+
+.card-order[aria-selected="true"] {
+    display: block;
+}
+
+.card-order[aria-selected="false"] {
+    display: none;
+}
+
+.content-button[aria-selected="true"] {
+    display: flex;
+}
+
+.content-button[aria-selected="false"] {
+    display: none;
+}
+
+.card-summary {
+    padding-inline: 16px;
+    padding-block: 40px;
+}
+
+.extra-information-credit-card {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.extra-information-date {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    align-items: center;
+}
+
+.container-product-img {
+    text-align: center;
+    background-color: var(--white);
+    margin-block-start: 24px;
+}
+
+@media screen and (min-width:1440px) {
+    .card-order {
+        padding-inline: 173px;
+        padding-block: 40px;
+    }
+    .section-icon-back {
+        display: block;
+    }
+    .card-summary {
+        padding-inline: 40px;
+        padding-block: 40px;
+    }
+}

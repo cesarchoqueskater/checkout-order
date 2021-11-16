@@ -1,0 +1,26 @@
+.content-button {
+    display: flex;
+    display: -webkit-box;
+    flex-direction: row;
+    justify-content: right;
+    margin-block-start: 5px;
+    gap: 3px;
+}
+
+label {
+    color: var(--grey);
+    font: var(--body-16medium);
+}
+
+input {
+    background-color: var(--grey10);
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    block-size: 64px;
+    inline-size: 100%;
+    margin-block-start: 8px;
+    margin-block-end: 32px;
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
+}

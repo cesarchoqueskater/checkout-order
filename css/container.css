@@ -1,0 +1,129 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(328px, 513px));
+    gap: 0;
+    justify-content: center;
+}
+
+.details-order-content {
+    background-color: var(--bg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: fit-content;
+}
+
+.order-summary-content {
+    background-color: var(--bg);
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+    height: fit-content;
+}
+
+.product-cupon {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-block-start: 8px;
+}
+
+.value-cupon {
+    block-size: 64px;
+    background-color: var(--grey10);
+    margin-block: 0px;
+}
+
+.label-value-cupon {
+    margin-block-end: 8px;
+}
+
+.content-characteristic {
+    margin-block-start: 24px;
+    margin-block-end: 24px;
+}
+
+.content-product-information {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-block-end: 40px;
+    gap: 24px;
+}
+
+.count-product-value {
+    margin-inline: 18px;
+}
+
+.content-characteristic div {
+    padding-block: 16px;
+    padding-inline: 16px;
+    border: 2px solid var(--grey);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: var(--body-16medium);
+    margin-block-end: 8px;
+    cursor: pointer;
+}
+
+.information-processor div[aria-selected="true"] {
+    border: 2px solid var(--primary);
+}
+
+.information-storage div[aria-selected="true"] {
+    border: 2px solid var(--primary);
+}
+
+.second-option,
+.third-option {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media screen and (min-width:1024px) {
+    .container {
+        gap: 30px;
+    }
+    .details-order-content {
+        position: relative;
+        border-radius: 10px;
+    }
+    .order-summary-content {
+        border-radius: 10px;
+    }
+    .content-characteristic div p {
+        inline-size: 267px;
+        margin: 0;
+    }
+    .product-cupon {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        justify-content: space-between;
+        margin-block-start: 8px;
+    }
+    .value-cupon {
+        inline-size: 243px;
+    }
+    .content-product-information {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .second-option,
+    .third-option {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .container {
+        display: grid;
+        grid-template-columns: 777px 513px;
+    }
+}

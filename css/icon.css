@@ -1,0 +1,15 @@
+.icon-back {
+    top: 40px;
+    left: 40px;
+    position: absolute;
+}
+
+.icon-check {
+    display: none;
+}
+
+@media screen and (min-width:1440px) {
+    .icon-check {
+        display: block;
+    }
+}
