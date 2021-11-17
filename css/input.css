@@ -24,3 +24,13 @@ input {
     padding-inline-start: 16px;
     padding-inline-end: 16px;
 }
+
+.input-radio {
+    position: absolute;
+    width: 12px;
+    opacity: 0;
+}
+
+.input-radio:focus~.selection-option-label {
+    box-shadow: 0 0 0 4px rgb(0 125 250 / 60%);
+}

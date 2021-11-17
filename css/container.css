@@ -54,30 +54,40 @@
     margin-inline: 18px;
 }
 
-.content-characteristic div {
+.selection-option-label {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     padding-block: 16px;
     padding-inline: 16px;
+    cursor: pointer;
+}
+
+.selection-option-label[aria-selected='true'] {
+    border: 2px solid var(--primary);
+    border-radius: 4px
+}
+
+.information-storage {
+    margin-block-end: 0px;
+}
+
+.information-storage .form-selection-description {
+    line-height: 60px;
+    block-size: 60px;
+}
+
+.selection-option {
+    position: relative;
     border: 2px solid var(--grey);
     border-radius: 4px;
     box-sizing: border-box;
     font: var(--body-16medium);
     margin-block-end: 8px;
-    cursor: pointer;
 }
 
-.information-processor div[aria-selected="true"] {
-    border: 2px solid var(--primary);
-}
-
-.information-storage div[aria-selected="true"] {
-    border: 2px solid var(--primary);
-}
-
-.second-option,
-.third-option {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.form-selection-description {
+    color: var(--dark);
 }
 
 @media screen and (min-width:1024px) {
@@ -91,7 +101,7 @@
     .order-summary-content {
         border-radius: 10px;
     }
-    .content-characteristic div p {
+    .form-selection-description {
         inline-size: 267px;
         margin: 0;
     }
@@ -111,8 +121,7 @@
         flex-direction: row;
         justify-content: space-between;
     }
-    .second-option,
-    .third-option {
+    .selection-option-label {
         display: flex;
         flex-direction: row;
         justify-content: space-between;

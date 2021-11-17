@@ -6,6 +6,7 @@
 :root {
     --primary: #3182ce;
     --black: #333333;
+    --dark: #000;
     --white: #fff;
     --white10: #f7fafc;
     --bg: #f7fafc;
@@ -72,6 +73,14 @@ p {
     margin-inline-end: 17px;
 }
 
+.span-value::before {
+    content: '$ ';
+}
+
+.span-value::after {
+    content: '.00';
+}
+
 .personal-information {
     margin-block-start: 32px;
 }
@@ -95,15 +104,6 @@ p {
 
 .title-content {
     margin-block-end: 8px;
-}
-
-.information-storage {
-    margin-block-end: 0px;
-}
-
-.information-storage p {
-    line-height: 60px;
-    block-size: 60px;
 }
 
 @media screen and (min-width:1440px) {
