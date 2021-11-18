@@ -81,6 +81,16 @@ p {
     content: '.00';
 }
 
+.subtotal-value-product::before,
+.total-value-product::before {
+    content: '$ ';
+}
+
+.subtotal-value-product::after,
+.total-value-product::after {
+    content: '.00';
+}
+
 .personal-information {
     margin-block-start: 32px;
 }

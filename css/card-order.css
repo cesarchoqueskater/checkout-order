@@ -10,32 +10,16 @@
 
 .card-order-page {
     block-size: 24px;
-    padding-inline: 173px;
+    padding-inline: 16px;
     padding-block-start: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     gap: 13px;
 }
 
 .card-order-page p {
     display: flex;
-}
-
-.card-order[aria-selected="true"] {
-    display: block;
-}
-
-.card-order[aria-selected="false"] {
-    display: none;
-}
-
-.content-button[aria-selected="true"] {
-    display: flex;
-}
-
-.content-button[aria-selected="false"] {
-    display: none;
 }
 
 .card-summary {
@@ -66,6 +50,15 @@
     .card-order {
         padding-inline: 173px;
         padding-block: 40px;
+    }
+    .card-order-page {
+        block-size: 24px;
+        padding-inline: 173px;
+        padding-block-start: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 13px;
     }
     .section-icon-back {
         display: block;

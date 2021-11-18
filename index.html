@@ -21,52 +21,60 @@
                         <img class="icon-back" src="./icons/chevron-left.svg" alt="icon-back">
                     </div>
                     <div class="card-order-page">
-                        <p class="section-account">Cuenta</p>
+                        <p class="section-account text-primary">Cuenta</p>
                         <img class="icon-check" src="./icons/checkbox-circle-fill 3.svg" alt="icon-check">
                         <p class="section-send">Envió</p>
                         <img class="icon-check" src="./icons/checkbox-circle-fill 3.svg" alt="icon-check">
                         <p class="section-pay">Pago</p>
                     </div>
-                    <div class="card-order details-account" aria-selected="true">
+                    <div class="card-order details-account">
                         <h3 class="title-card">Detalles de la cuenta</h3>
-                        <div class="personal-information">
-                            <div class="content-input">
-                                <label for="email">Correo electronico</label>
-                                <input type="email" name="email" id="email">
+                        <form class="form-details-account">
+                            <div class="personal-information">
+                                <div class="content-input">
+                                    <label for="email">Correo electronico</label>
+                                    <input type="email" name="email" id="email" disabled required>
+                                </div>
+                                <div class="content-input">
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" name="password" id="password" disabled required>
+                                </div>
                             </div>
-                            <div class="content-input">
-                                <label for="password">Contraseña</label>
-                                <input type="password" name="password" id="password">
+                            <div class="content-login-button">
+                                <div class="content-button">
+                                    <button class="btn btn-register">Registrarse</button>
+                                    <button type="submit" class="btn btn-login">Iniciar Sesión</button>
+                                </div>
                             </div>
-                            <div class="content-button" aria-selected="true">
-                                <button class="btn btn-register">Registrarse</button>
-                                <button class="btn btn-login">Iniciar Sesión</button>
-                            </div>
-                            <div class="content-button" aria-selected="false">
+                        </form>
+                        <div class="content-details-button">
+                            <div class="content-button">
                                 <button class="btn btn-cancel">Cancelar orden</button>
                                 <button class="btn btn-details-send">Detalles de envió</button>
                             </div>
                         </div>
                     </div>
-                    <div class="card-order details-send" aria-selected="false">
+                    <div class="card-order details-send">
                         <h3 class="title-card">Detalles de envió</h3>
-                        <div class="personal-information">
-                            <div class="content-input">
-                                <label for="numberAddress">Primera línea de dirección</label>
-                                <input type="text" name="numberAddress" id="numberAddress">
-                            </div>
-                            <div class="content-input">
-                                <label for="address">Nombre de la calle</label>
-                                <input type="text" name="address" id="address">
-                            </div>
-                            <div class="content-input">
-                                <label for="zipcode">Código postal</label>
-                                <input type="text" name="zipcode" id="zipcode">
-                            </div>
-                            <div class="content-button">
-                                <button class="btn btn-cancel">Cancelar orden</button>
-                                <button class="btn btn-continue-pay">Continuar al pago</button>
-                            </div>
+                        <formss>
+                            <div class="personal-information">
+                                <div class="content-input">
+                                    <label for="numberAddress">Primera línea de dirección</label>
+                                    <input type="text" name="numberAddress" id="numberAddress" required>
+                                </div>
+                                <div class="content-input">
+                                    <label for="address">Nombre de la calle</label>
+                                    <input type="text" name="address" id="address" required>
+                                </div>
+                                <div class="content-input">
+                                    <label for="zipcode">Código postal</label>
+                                    <input type="text" name="zipcode" id="zipcode" required>
+                                </div>
+                                <div class="content-button">
+                                    <button class="btn btn-cancel">Cancelar orden</button>
+                                    <button type="submadsit" class="btn btn-continue-pay">Continuar al pago</button>
+                                </div>
+                        </formss>
                         </div>
                     </div>
                     <div class="card-order details-pay" aria-selected="false">
@@ -74,27 +82,27 @@
                         <div class="personal-information">
                             <div class="content-input">
                                 <label for="nameCreditCard">Nombre en la tarjeta</label>
-                                <input type="text" name="nameCreditCard" id="nameCreditCard">
+                                <input type="text" name="nameCreditCard" id="nameCreditCard" required>
                             </div>
                             <div class="content-input">
                                 <label for="numberCreditCard">Número de tarjeta</label>
-                                <input type="text" name="numberCreditCard" id="numberCreditCard">
+                                <input type="text" name="numberCreditCard" id="numberCreditCard" required>
                             </div>
                             <div class="extra-information-credit-card">
                                 <div class="extra-information-date">
                                     <div class="content-input">
                                         <label for="month">Mes</label>
-                                        <input type="text" name="month" id="month">
+                                        <input type="text" name="month" id="month" required>
                                     </div>
                                     <span>/</span>
                                     <div class="content-input">
                                         <label for="year">Año</label>
-                                        <input type="text" name="year" id="year">
+                                        <input type="text" name="year" id="year" required>
                                     </div>
                                 </div>
                                 <div class="content-input">
                                     <label for="cvc">CVC</label>
-                                    <input type="text" name="cvc" id="cvc">
+                                    <input type="text" name="cvc" id="cvc" required>
                                 </div>
                             </div>
                             <div class="content-button">
@@ -117,10 +125,10 @@
                             </div>
                             <div class="content-product-count">
                                 <button class="btn-option-product btn-minus"><img src="./icons/Minus.svg"
-                                        alt="icon-minus"></button>
+                                    alt="icon-minus"></button>
                                 <span class="count-product-value">1</span>
                                 <button class="btn-option-product btn-add"><img src="./icons/add-line.svg"
-                                        alt="icon-add"></button>
+                                    alt="icon-add"></button>
                             </div>
                         </div>
                         <div class="content-amount">
@@ -139,7 +147,7 @@
                         </div>
                         <div class="content-product-cupon">
                             <span class="label-value-cupon body-16medium text-grey" id="value-cupon">Tarjeta de regalo /
-                                código de descuento</span>
+                            código de descuento</span>
                             <div class="product-cupon">
                                 <div class="content-input-cupon">
                                     <input type="text" name="value-cupon" class="value-cupon" id="label-value-cupon">
@@ -152,27 +160,30 @@
                             <section class="selection-option">
                                 <input type="radio" id="8N" name="input-radio-processor" class="input-radio" value="0">
                                 <label for="8N" class="selection-option-label first-option" aria-selected="true">
-                                    <p class="form-selection-description">
-                                        Chip M1 Pro de Apple con CPU de 8 núcleos, GPU de 14 núcleos y Neural Engine de 16 núcleos
-                                    </p>
-                                </label>
+                                <p class="form-selection-description">
+                                    Chip M1 Pro de Apple con CPU de 8 núcleos, GPU de 14 núcleos y Neural Engine de
+                                    16 núcleos
+                                </p>
+                            </label>
                             </section>
                             <section class="selection-option">
                                 <input type="radio" id="10N" name="input-radio-processor" class="input-radio" value="5500">
                                 <label for="10N" class="selection-option-label second-option">
-                                    <p class="form-selection-description">Chip M1 Pro de Apple con CPU de 10 núcleos, GPU de 14 núcleos y Neural Engine de 16 núcleos
-                                    </p>
-                                    <span class="span-value"></span>
-                                </label>
+                                <p class="form-selection-description">Chip M1 Pro de Apple con CPU de 10 núcleos,
+                                    GPU de 14 núcleos y Neural Engine de 16 núcleos
+                                </p>
+                                <span class="span-value"></span>
+                            </label>
                             </section>
                             <section class="selection-option">
                                 <input type="radio" id="10NPlus" name="input-radio-processor" class="input-radio" value="8000">
                                 <label for="10NPlus" class="selection-option-label third-option">
-                                    <p class="form-selection-description">
-                                        Chip M1 Pro de Apple con CPU de 10 núcleos, GPU de 16 núcleos y Neural Engine de 16 núcleos
-                                    </p>
-                                    <span class="span-value"></span>
-                                </label>
+                                <p class="form-selection-description">
+                                    Chip M1 Pro de Apple con CPU de 10 núcleos, GPU de 16 núcleos y Neural Engine de
+                                    16 núcleos
+                                </p>
+                                <span class="span-value"></span>
+                            </label>
                             </section>
                         </div>
                         <div class="content-characteristic information-storage">
@@ -180,19 +191,19 @@
                             <section class="selection-option">
                                 <input type="radio" id="512GB" name="input-radio-storage" class="input-radio" value="0">
                                 <label for="512GB" class="selection-option-label first-option">
-                                    <p class="form-selection-description">
-                                        Almacenamiento SSD de 512 GB
-                                    </p>
-                                </label>
+                                <p class="form-selection-description">
+                                    Almacenamiento SSD de 512 GB
+                                </p>
+                            </label>
                             </section>
                             <section class="selection-option">
                                 <input type="radio" id="1TB" name="input-radio-storage" class="input-radio" value="5500">
                                 <label for="1TB" class="selection-option-label second-option">
-                                    <p class="form-selection-description">
-                                        Almacenamiento SSD de 1 TB
-                                    </p>
-                                    <span class="span-value"></span>
-                                </label>
+                                <p class="form-selection-description">
+                                    Almacenamiento SSD de 1 TB
+                                </p>
+                                <span class="span-value"></span>
+                            </label>
                             </section>
                         </div>
                     </div>
