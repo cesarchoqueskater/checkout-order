@@ -20,9 +20,18 @@ input {
     block-size: 64px;
     inline-size: 100%;
     margin-block-start: 8px;
-    margin-block-end: 32px;
+    /* margin-block-end: 32px; */
     padding-inline-start: 16px;
     padding-inline-end: 16px;
+}
+
+.content-input {
+    margin-block-end: 32px;
+}
+
+.content-input span {
+    font: var(--body-16medium);
+    color: var(--red);
 }
 
 .input-radio {
@@ -33,4 +42,16 @@ input {
 
 .input-radio:focus~.selection-option-label {
     box-shadow: 0 0 0 4px rgb(0 125 250 / 60%);
+}
+
+.result {
+    text-align: right;
+}
+
+input[aria-checked-validation="true"] {
+    background-image: url('../icons/checkbox-circle-fill.svg');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 20px;
+    padding-inline-end: 50px;
 }

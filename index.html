@@ -22,9 +22,9 @@
                     </div>
                     <div class="card-order-page">
                         <p class="section-account text-primary">Cuenta</p>
-                        <img class="icon-check" src="./icons/checkbox-circle-fill 3.svg" alt="icon-check">
+                        <img class="icon-check" src="./icons/checkbox-circle-fill.svg" alt="icon-check">
                         <p class="section-send">Envió</p>
-                        <img class="icon-check" src="./icons/checkbox-circle-fill 3.svg" alt="icon-check">
+                        <img class="icon-check" src="./icons/checkbox-circle-fill.svg" alt="icon-check">
                         <p class="section-pay">Pago</p>
                     </div>
                     <div class="card-order details-account">
@@ -34,10 +34,16 @@
                                 <div class="content-input">
                                     <label for="email">Correo electronico</label>
                                     <input type="email" name="email" id="email" disabled required>
+                                    <div class="result">
+                                        <span class="resultEmail"></span>
+                                    </div>
                                 </div>
                                 <div class="content-input">
                                     <label for="password">Contraseña</label>
                                     <input type="password" name="password" id="password" disabled required>
+                                    <div class="result">
+                                        <span class="resultPassword"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="content-login-button">
@@ -61,14 +67,23 @@
                                 <div class="content-input">
                                     <label for="numberAddress">Primera línea de dirección</label>
                                     <input type="text" name="numberAddress" id="numberAddress" required>
+                                    <div class="result">
+                                        <span class="resultnumberAddress"></span>
+                                    </div>
                                 </div>
                                 <div class="content-input">
                                     <label for="address">Nombre de la calle</label>
                                     <input type="text" name="address" id="address" required>
+                                    <div class="result">
+                                        <span class="resultAddress"></span>
+                                    </div>
                                 </div>
                                 <div class="content-input">
                                     <label for="zipcode">Código postal</label>
                                     <input type="text" name="zipcode" id="zipcode" required>
+                                    <div class="result">
+                                        <span class="resultZipcode"></span>
+                                    </div>
                                 </div>
                                 <div class="content-button">
                                     <button class="btn btn-cancel">Cancelar orden</button>

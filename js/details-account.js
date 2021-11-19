@@ -16,6 +16,8 @@ const $passwordInput = document.querySelector('#password')
 const $sectionSendHeader = document.querySelector('.section-send')
 const $iconBackHeader = document.querySelector('.icon-back')
 
+const $resultEmail = document.querySelector('.resultEmail')
+const $resultPassword = document.querySelector('.resultPassword')
 
 $detailsSend.hidden = true
 $detailsPay.hidden = true
@@ -36,7 +38,6 @@ export function showCardDetailsSend() {
     $btnDetailsSend.addEventListener('click', showCardDetailsSendForm)
 }
 
-
 export function showInputComplete() {
     $contentButtonDetails.hidden = false
     $contentButtonLogin.hidden = true
@@ -49,9 +50,40 @@ export function cleanInputValue() {
     $passwordInput.value = ''
 }
 
-export function showCardDetailsSendForm() {
-    $sectionSendHeader.classList.add('text-primary')
-    $iconBackHeader.hidden = false
-    $detailsAccount.hidden = true
-    $detailsSend.hidden = false
+export function showCardDetailsSendForm(e) {
+
+    let value = true
+    const validateEmail = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+
+    if ($emailInput.value.length == 0) {
+        $resultEmail.innerText = 'El campo de correo esta vacio'
+        value = false
+    } else if (!validateEmail.test($emailInput.value)) {
+        $resultEmail.innerText = 'El campo de correo no tiene la estructura de un correo'
+        value = false
+    } else {
+        $resultEmail.innerText = ''
+        $emailInput.setAttribute('aria-checked-validation', true)
+    }
+
+    if ($passwordInput.value.length == 0) {
+        $resultPassword.innerText = 'El campo de password esta vacio'
+        value = false
+    } else {
+        $resultPassword.innerText = ''
+        $passwordInput.setAttribute('aria-checked-validation', true)
+    }
+
+    if (value) {
+        $btnDetailsSend.textContent = 'Cargando ...'
+        setTimeout(() => {
+            e.preventDefault()
+            $sectionSendHeader.classList.add('text-primary')
+            $iconBackHeader.hidden = false
+            $detailsAccount.hidden = true
+            $detailsSend.hidden = false
+        }, 1000)
+        return true
+    }
+    return true
 }
