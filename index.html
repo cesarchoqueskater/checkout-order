@@ -62,62 +62,77 @@
                     </div>
                     <div class="card-order details-send">
                         <h3 class="title-card">Detalles de envió</h3>
-                        <formss>
-                            <div class="personal-information">
-                                <div class="content-input">
-                                    <label for="numberAddress">Primera línea de dirección</label>
-                                    <input type="text" name="numberAddress" id="numberAddress" required>
-                                    <div class="result">
-                                        <span class="resultnumberAddress"></span>
-                                    </div>
+                        <!-- <form> -->
+                        <div class="personal-information">
+                            <div class="content-input">
+                                <label for="numberAddress">Primera línea de dirección</label>
+                                <input type="text" name="numberAddress" id="numberAddress" required>
+                                <div class="result">
+                                    <span class="resultnumberAddress"></span>
                                 </div>
-                                <div class="content-input">
-                                    <label for="address">Nombre de la calle</label>
-                                    <input type="text" name="address" id="address" required>
-                                    <div class="result">
-                                        <span class="resultAddress"></span>
-                                    </div>
+                            </div>
+                            <div class="content-input">
+                                <label for="address">Nombre de la calle</label>
+                                <input type="text" name="address" id="address" required>
+                                <div class="result">
+                                    <span class="resultAddress"></span>
                                 </div>
-                                <div class="content-input">
-                                    <label for="zipcode">Código postal</label>
-                                    <input type="text" name="zipcode" id="zipcode" required>
-                                    <div class="result">
-                                        <span class="resultZipcode"></span>
-                                    </div>
+                            </div>
+                            <div class="content-input">
+                                <label for="zipcode">Código postal</label>
+                                <input type="text" name="zipcode" id="zipcode" required>
+                                <div class="result">
+                                    <span class="resultZipcode"></span>
                                 </div>
-                                <div class="content-button">
-                                    <button class="btn btn-cancel">Cancelar orden</button>
-                                    <button type="submadsit" class="btn btn-continue-pay">Continuar al pago</button>
-                                </div>
-                        </formss>
+                            </div>
+                            <div class="content-button">
+                                <button class="btn btn-cancel">Cancelar orden</button>
+                                <button type="submit" class="btn btn-continue-pay">Continuar al pago</button>
+                            </div>
+                            <!-- </form> -->
                         </div>
                     </div>
-                    <div class="card-order details-pay" aria-selected="false">
+                    <div class="card-order details-pay">
                         <h3 class="title-card">Detalles del pago</h3>
                         <div class="personal-information">
                             <div class="content-input">
                                 <label for="nameCreditCard">Nombre en la tarjeta</label>
                                 <input type="text" name="nameCreditCard" id="nameCreditCard" required>
+                                <div class="result">
+                                    <span class="resultNameCreditCard"></span>
+                                </div>
                             </div>
                             <div class="content-input">
                                 <label for="numberCreditCard">Número de tarjeta</label>
-                                <input type="text" name="numberCreditCard" id="numberCreditCard" required>
+                                <input type="text" name="numberCreditCard" id="numberCreditCard" maxlength="19" required>
+                                <div class="result">
+                                    <span class="resultNumberCreditCard"></span>
+                                </div>
                             </div>
                             <div class="extra-information-credit-card">
                                 <div class="extra-information-date">
                                     <div class="content-input">
                                         <label for="month">Mes</label>
-                                        <input type="text" name="month" id="month" required>
+                                        <input type="text" name="month" id="month" maxlength="2" required>
+                                        <div class="result">
+                                            <span class="resultMonth"></span>
+                                        </div>
                                     </div>
                                     <span>/</span>
                                     <div class="content-input">
                                         <label for="year">Año</label>
-                                        <input type="text" name="year" id="year" required>
+                                        <input type="text" name="year" id="year" maxlength="2" required>
+                                        <div class="result">
+                                            <span class="resultYear"></span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="content-input">
                                     <label for="cvc">CVC</label>
-                                    <input type="text" name="cvc" id="cvc" required>
+                                    <input type="text" name="cvc" id="cvc" maxlength="3" required>
+                                    <div class="result">
+                                        <span class="resultCVC"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="content-button">

@@ -60,5 +60,6 @@ export function showCardDetailsPayForm(e) {
             return true
         }, 1000)
     }
+    e.preventDefault()
     return true
 }

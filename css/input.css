@@ -30,7 +30,7 @@ input {
 }
 
 .content-input span {
-    font: var(--body-16medium);
+    font: var(--body-12medium);
     color: var(--red);
 }
 

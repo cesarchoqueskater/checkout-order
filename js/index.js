@@ -2,6 +2,7 @@ import { addCountProduct, substractCountProduct, setvaluePriceSecondOption, setv
 import { selectInformationProcessor, selectInformationStorage } from './showHideContent.js'
 import { showInputFormDetailsAccount, cleanInputFormDetailAccount, showCardDetailsSend } from './details-account.js'
 import { showCardDetailsPay } from './details-send.js'
+import { showCardPayConfirm, validateNumberCreditCard } from './details-pay.js'
 
 
 selectInformationProcessor()
@@ -11,8 +12,10 @@ substractCountProduct()
 setvaluePriceSecondOption()
 setvaluePriceThirdOption()
     // checkedInformationProcessor()
+validateNumberCreditCard()
 
 showInputFormDetailsAccount()
 cleanInputFormDetailAccount()
 showCardDetailsSend()
 showCardDetailsPay()
+showCardPayConfirm()
