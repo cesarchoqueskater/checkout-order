@@ -3,6 +3,7 @@
     grid-template-columns: repeat(auto-fill, minmax(328px, 513px));
     gap: 0;
     justify-content: center;
+    margin-block: 80px;
 }
 
 .details-order-content {
@@ -12,7 +13,7 @@
     height: fit-content;
 }
 
-.order-summary-content {
+.summary-order-content {
     background-color: var(--bg);
     border-end-start-radius: 10px;
     border-end-end-radius: 10px;
@@ -65,7 +66,7 @@
 
 .selection-option-label[aria-selected='true'] {
     border: 2px solid var(--primary);
-    border-radius: 4px
+    border-radius: 4px;
 }
 
 .information-storage {
@@ -86,6 +87,11 @@
     margin-block-end: 8px;
 }
 
+.selection-option-border {
+    border: none;
+    box-sizing: border-box;
+}
+
 .form-selection-description {
     color: var(--dark);
 }
@@ -98,7 +104,7 @@
         position: relative;
         border-radius: 10px;
     }
-    .order-summary-content {
+    .summary-order-content {
         border-radius: 10px;
     }
     .form-selection-description {

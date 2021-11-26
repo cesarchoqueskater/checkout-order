@@ -1,14 +1,11 @@
-const $detailsAccount = document.querySelector('.details-account')
-const $detailsSend = document.querySelector('.details-send')
-const $detailsPay = document.querySelector('.details-pay')
+import { setRemoveAttributeNumberAddressInput, setRemoveAttributeAddressInput, setRemoveAttributeZipCodeInput } from './utils/setRemoveAttribute.js'
+import { showHideDetailsSend, showHideDetailsPay, colorTextHeaderDetailsSend } from './utils/showHideComponents.js'
 
 const $btnPay = document.querySelector('.btn-continue-pay')
 
 const $numberAddressInput = document.querySelector('#numberAddress')
 const $addressInput = document.querySelector('#address')
 const $zipCodeInput = document.querySelector('#zipcode')
-
-const $sectionPayHeader = document.querySelector('.section-pay')
 
 const $resultnumberAddress = document.querySelector('.resultnumberAddress')
 const $resultAddress = document.querySelector('.resultAddress')
@@ -17,7 +14,6 @@ const $resultZipcode = document.querySelector('.resultZipcode')
 export function showCardDetailsPay() {
     $btnPay.addEventListener('click', showCardDetailsPayForm)
 }
-
 
 export function showCardDetailsPayForm(e) {
     let value = true
@@ -28,7 +24,7 @@ export function showCardDetailsPayForm(e) {
         value = false
     } else {
         $resultnumberAddress.innerText = ''
-        $numberAddressInput.setAttribute('aria-checked-validation', true)
+        setRemoveAttributeNumberAddressInput(true)
     }
 
     if ($addressInput.value.length == 0) {
@@ -36,7 +32,7 @@ export function showCardDetailsPayForm(e) {
         value = false
     } else {
         $resultAddress.innerText = ''
-        $addressInput.setAttribute('aria-checked-validation', true)
+        setRemoveAttributeAddressInput(true)
     }
 
     if ($zipCodeInput.value.length == 0) {
@@ -47,16 +43,20 @@ export function showCardDetailsPayForm(e) {
         value = false
     } else {
         $resultZipcode.innerText = ''
-        $zipCodeInput.setAttribute('aria-checked-validation', true)
+        setRemoveAttributeZipCodeInput(true)
     }
 
     if (value) {
         $btnPay.textContent = 'Cargando ...'
         setTimeout(() => {
             e.preventDefault()
-            $sectionPayHeader.classList.add('text-primary')
-            $detailsSend.hidden = true
-            $detailsPay.hidden = false
+            setRemoveAttributeNumberAddressInput()
+            setRemoveAttributeAddressInput()
+            setRemoveAttributeZipCodeInput()
+            showHideDetailsSend(true)
+            showHideDetailsPay()
+            colorTextHeaderDetailsSend(true)
+            $btnPay.textContent = 'Continuar al pago'
             return true
         }, 1000)
     }

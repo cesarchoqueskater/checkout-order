@@ -6,12 +6,14 @@ const $optionSelectedInformationStorage = document.querySelectorAll('.informatio
 export function removeAttributeInformationProcessor() {
     $optionSelectedInformationProcessor.forEach((item) => {
         item.removeAttribute('aria-selected', true)
+        item.parentElement.classList.remove("selection-option-border")
     })
 }
 
 export function removeAttributeInformationStorage() {
     $optionSelectedInformationStorage.forEach((item) => {
         item.removeAttribute('aria-selected', true)
+        item.parentElement.classList.remove("selection-option-border")
     })
 }
 
@@ -21,6 +23,7 @@ export function selectInformationStorage() {
         item.addEventListener('click', function() {
             removeAttributeInformationStorage()
             item.setAttribute('aria-selected', true)
+            item.parentElement.classList.add("selection-option-border")
         })
     })
 }
@@ -28,8 +31,10 @@ export function selectInformationStorage() {
 export function selectInformationProcessor() {
     $optionSelectedInformationProcessor.forEach((item) => {
         item.addEventListener('click', function() {
+            // debugger
             removeAttributeInformationProcessor()
             item.setAttribute('aria-selected', true)
+            item.parentElement.classList.add("selection-option-border")
         })
     })
 }

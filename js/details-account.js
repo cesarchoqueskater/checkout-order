@@ -1,33 +1,21 @@
-const $detailsAccount = document.querySelector('.details-account')
-const $detailsSend = document.querySelector('.details-send')
-const $detailsPay = document.querySelector('.details-pay')
-const $contentButtonLogin = document.querySelector('.content-login-button')
-const $contentButtonDetails = document.querySelector('.content-details-button')
+import { removeInputDetailsAccount, cleanInputValue } from './utils/components.js'
+import { setRemoveAttributeEmailInput, setRemoveAttributePasswordInput } from './utils/setRemoveAttribute.js'
+import { showHideDetailsAccount, showHideDetailsSend } from './utils/showHideComponents.js'
+
 const $formDetailsAccount = document.querySelector('.form-details-account')
 
 const $btnCancel = document.querySelector('.btn-cancel')
 const $btnDetailsSend = document.querySelector('.btn-details-send')
 
-
 const $emailInput = document.querySelector('#email')
 const $passwordInput = document.querySelector('#password')
-
-
-const $sectionSendHeader = document.querySelector('.section-send')
-const $iconBackHeader = document.querySelector('.icon-back')
 
 const $resultEmail = document.querySelector('.resultEmail')
 const $resultPassword = document.querySelector('.resultPassword')
 
-$detailsSend.hidden = true
-$detailsPay.hidden = true
-$contentButtonDetails.hidden = true
-$iconBackHeader.hidden = true
-
-
 
 export function showInputFormDetailsAccount() {
-    $formDetailsAccount.addEventListener('click', showInputComplete)
+    $formDetailsAccount.addEventListener('click', removeInputDetailsAccount)
 }
 
 export function cleanInputFormDetailAccount() {
@@ -36,18 +24,6 @@ export function cleanInputFormDetailAccount() {
 
 export function showCardDetailsSend() {
     $btnDetailsSend.addEventListener('click', showCardDetailsSendForm)
-}
-
-export function showInputComplete() {
-    $contentButtonDetails.hidden = false
-    $contentButtonLogin.hidden = true
-    $emailInput.removeAttribute('disabled')
-    $passwordInput.removeAttribute('disabled')
-}
-
-export function cleanInputValue() {
-    $emailInput.value = ''
-    $passwordInput.value = ''
 }
 
 export function showCardDetailsSendForm(e) {
@@ -63,7 +39,7 @@ export function showCardDetailsSendForm(e) {
         value = false
     } else {
         $resultEmail.innerText = ''
-        $emailInput.setAttribute('aria-checked-validation', true)
+        setRemoveAttributeEmailInput(true)
     }
 
     if ($passwordInput.value.length == 0) {
@@ -71,17 +47,18 @@ export function showCardDetailsSendForm(e) {
         value = false
     } else {
         $resultPassword.innerText = ''
-        $passwordInput.setAttribute('aria-checked-validation', true)
+        setRemoveAttributePasswordInput(true)
     }
 
     if (value) {
         $btnDetailsSend.textContent = 'Cargando ...'
         setTimeout(() => {
             e.preventDefault()
-            $sectionSendHeader.classList.add('text-primary')
-            $iconBackHeader.hidden = false
-            $detailsAccount.hidden = true
-            $detailsSend.hidden = false
+            showHideDetailsAccount(true)
+            showHideDetailsSend()
+            setRemoveAttributeEmailInput()
+            setRemoveAttributePasswordInput()
+            $btnDetailsSend.textContent = 'Detalles de envió'
         }, 1000)
         return true
     }

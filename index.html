@@ -62,7 +62,6 @@
                     </div>
                     <div class="card-order details-send">
                         <h3 class="title-card">Detalles de envió</h3>
-                        <!-- <form> -->
                         <div class="personal-information">
                             <div class="content-input">
                                 <label for="numberAddress">Primera línea de dirección</label>
@@ -89,7 +88,6 @@
                                 <button class="btn btn-cancel">Cancelar orden</button>
                                 <button type="submit" class="btn btn-continue-pay">Continuar al pago</button>
                             </div>
-                            <!-- </form> -->
                         </div>
                     </div>
                     <div class="card-order details-pay">
@@ -142,7 +140,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="order-summary-content">
+                <section class="summary-order-content">
                     <div class="card-summary">
                         <h3 class="title-card">Resumen de la Orden</h3>
                         <div class="container-product-img">
@@ -155,10 +153,10 @@
                             </div>
                             <div class="content-product-count">
                                 <button class="btn-option-product btn-minus"><img src="./icons/Minus.svg"
-                                    alt="icon-minus"></button>
+                                        alt="icon-minus"></button>
                                 <span class="count-product-value">1</span>
                                 <button class="btn-option-product btn-add"><img src="./icons/add-line.svg"
-                                    alt="icon-add"></button>
+                                        alt="icon-add"></button>
                             </div>
                         </div>
                         <div class="content-amount">
@@ -177,7 +175,7 @@
                         </div>
                         <div class="content-product-cupon">
                             <span class="label-value-cupon body-16medium text-grey" id="value-cupon">Tarjeta de regalo /
-                            código de descuento</span>
+                                código de descuento</span>
                             <div class="product-cupon">
                                 <div class="content-input-cupon">
                                     <input type="text" name="value-cupon" class="value-cupon" id="label-value-cupon">
@@ -190,30 +188,30 @@
                             <section class="selection-option">
                                 <input type="radio" id="8N" name="input-radio-processor" class="input-radio" value="0">
                                 <label for="8N" class="selection-option-label first-option" aria-selected="true">
-                                <p class="form-selection-description">
-                                    Chip M1 Pro de Apple con CPU de 8 núcleos, GPU de 14 núcleos y Neural Engine de
-                                    16 núcleos
-                                </p>
-                            </label>
+                                    <p class="form-selection-description">
+                                        Chip M1 Pro de Apple con CPU de 8 núcleos, GPU de 14 núcleos y Neural Engine de
+                                        16 núcleos
+                                    </p>
+                                </label>
                             </section>
                             <section class="selection-option">
                                 <input type="radio" id="10N" name="input-radio-processor" class="input-radio" value="5500">
                                 <label for="10N" class="selection-option-label second-option">
-                                <p class="form-selection-description">Chip M1 Pro de Apple con CPU de 10 núcleos,
-                                    GPU de 14 núcleos y Neural Engine de 16 núcleos
-                                </p>
-                                <span class="span-value"></span>
-                            </label>
+                                    <p class="form-selection-description">Chip M1 Pro de Apple con CPU de 10 núcleos,
+                                        GPU de 14 núcleos y Neural Engine de 16 núcleos
+                                    </p>
+                                    <span class="span-value"></span>
+                                </label>
                             </section>
                             <section class="selection-option">
                                 <input type="radio" id="10NPlus" name="input-radio-processor" class="input-radio" value="8000">
                                 <label for="10NPlus" class="selection-option-label third-option">
-                                <p class="form-selection-description">
-                                    Chip M1 Pro de Apple con CPU de 10 núcleos, GPU de 16 núcleos y Neural Engine de
-                                    16 núcleos
-                                </p>
-                                <span class="span-value"></span>
-                            </label>
+                                    <p class="form-selection-description">
+                                        Chip M1 Pro de Apple con CPU de 10 núcleos, GPU de 16 núcleos y Neural Engine de
+                                        16 núcleos
+                                    </p>
+                                    <span class="span-value"></span>
+                                </label>
                             </section>
                         </div>
                         <div class="content-characteristic information-storage">
@@ -221,26 +219,44 @@
                             <section class="selection-option">
                                 <input type="radio" id="512GB" name="input-radio-storage" class="input-radio" value="0">
                                 <label for="512GB" class="selection-option-label first-option">
-                                <p class="form-selection-description">
-                                    Almacenamiento SSD de 512 GB
-                                </p>
-                            </label>
+                                    <p class="form-selection-description">
+                                        Almacenamiento SSD de 512 GB
+                                    </p>
+                                </label>
                             </section>
                             <section class="selection-option">
                                 <input type="radio" id="1TB" name="input-radio-storage" class="input-radio" value="5500">
                                 <label for="1TB" class="selection-option-label second-option">
-                                <p class="form-selection-description">
-                                    Almacenamiento SSD de 1 TB
-                                </p>
-                                <span class="span-value"></span>
-                            </label>
+                                    <p class="form-selection-description">
+                                        Almacenamiento SSD de 1 TB
+                                    </p>
+                                    <span class="span-value"></span>
+                                </label>
                             </section>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
+        <div class="pay-section">
+            <section class="pay-confirm-content">
+                <div class="pay-container">
+                    <figure class="figure-container">
+                        <svg width="24" height="24" viewBox="0 0 24 24" class="figure-width" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12ZM18.073 8.929L11.003 16L6.76 11.757L8.174 10.343L11.003 13.172L16.659 7.515L18.073 8.929Z"
+                                fill="#066952" />
+                        </svg>
+                        <figcaption class="subtitile-figure">¡Pago completado!</figcaption>
+                    </figure>
+                    <div class="button-container">
+                        <button class="btn btn-continue">Seguir Comprando</button>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
+
     <script type="module" src="./js/index.js"></script>
 </body>
 

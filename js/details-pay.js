@@ -1,6 +1,12 @@
+import { cleanInputValue, addInputDetailsAccount, cleanAllInputValues } from './utils/components.js'
+import { showHideDetailsOrderContent, showHideSummaryOrderContent, showHideDetailsAccount, showHideDetailsSend, showHideDetailsPay } from './utils/showHideComponents.js'
+import { setRemoveAttributeNameCreditCardInput, setRemoveAttributeNumberCreditCardInput, setRemoveAttributeMonthInput, setRemoveAttributeYearInput, setRemoveAttributeCVCInput } from './utils/setRemoveAttribute.js';
+
 const $detailsAccount = document.querySelector('.details-account')
 const $detailsSend = document.querySelector('.details-send')
 const $detailsPay = document.querySelector('.details-pay')
+const $payConfirmContent = document.querySelector('.pay-section')
+
 
 const $btnPayOrder = document.querySelector('.btn-pay-order')
 
@@ -18,7 +24,9 @@ const $resultMonth = document.querySelector('.resultMonth')
 const $resultYear = document.querySelector('.resultYear')
 const $resultCVC = document.querySelector('.resultCVC')
 
-
+const $wrapperContent = document.querySelector('.wrapper')
+const $btnContinue = document.querySelector('.btn-continue')
+const $summaryContent = document.querySelector('.summary-order-content')
 
 export function validateNumberCreditCard() {
     $numberCreditCardInput.addEventListener('input', function(e) {
@@ -31,10 +39,6 @@ export function validateNumberCreditCard() {
     });
 }
 
-export function showCardPayConfirm() {
-    $btnPayOrder.addEventListener('click', showCardPayConfirmForm)
-}
-
 export function showCardPayConfirmForm(e) {
     let value = true
     const validateNumber = /^\d+$/;
@@ -44,15 +48,15 @@ export function showCardPayConfirmForm(e) {
         value = false
     } else {
         $resultNameCreditCard.innerText = ''
-        $nameCreditCardInput.setAttribute('aria-checked-validation', true)
+        setRemoveAttributeNameCreditCardInput(true)
     }
 
-    if ($numberCreditCardInput.value.length == 0) {
+    if ($numberCreditCardInput.value.length !== 19) {
         $resultNumberCreditCard.innerText = 'El campo de número de la Tarjeta esta incompleto o vacio'
         value = false
     } else {
         $resultNumberCreditCard.innerText = ''
-        $numberCreditCardInput.setAttribute('aria-checked-validation', true)
+        setRemoveAttributeNumberCreditCardInput(true)
     }
 
     if ($monthInput.value.length !== 2) {
@@ -63,7 +67,7 @@ export function showCardPayConfirmForm(e) {
         value = false
     } else {
         $resultMonth.innerText = ''
-        $monthInput.setAttribute('aria-checked-validation', true)
+        setRemoveAttributeMonthInput(true)
     }
 
     if ($yearInput.value.length !== 2) {
@@ -74,7 +78,7 @@ export function showCardPayConfirmForm(e) {
         value = false
     } else {
         $resultYear.innerText = ''
-        $yearInput.setAttribute('aria-checked-validation', true)
+        setRemoveAttributeYearInput(true)
     }
 
     if ($cvcInput.value.length !== 3) {
@@ -85,6 +89,50 @@ export function showCardPayConfirmForm(e) {
         value = false
     } else {
         $resultCVC.innerText = ''
-        $cvcInput.setAttribute('aria-checked-validation', true)
+        setRemoveAttributeCVCInput(true)
     }
+    if (value) {
+        $btnPayOrder.textContent = 'Procesando Pago ...'
+        setTimeout(() => {
+            e.preventDefault()
+            showHideDetailsOrderContent(true)
+            showHideSummaryOrderContent(true)
+            $wrapperContent.style.display = 'none'
+            $payConfirmContent.hidden = false
+            setRemoveAttributeNameCreditCardInput()
+            setRemoveAttributeNumberCreditCardInput()
+            setRemoveAttributeMonthInput()
+            setRemoveAttributeYearInput()
+            setRemoveAttributeCVCInput()
+            $btnPayOrder.textContent = 'Pagar ahora'
+            return true
+        }, 1000);
+    }
+    e.preventDefault()
+    return true
+}
+
+
+
+
+export function showCardPayConfirm() {
+    $btnPayOrder.addEventListener('click', showCardPayConfirmForm)
+}
+
+export function showContinueBuytoHome() {
+    // debugger
+    $btnContinue.addEventListener('click', function() {
+        console.log("Se hizo click")
+        cleanAllInputValues()
+        cleanInputValue()
+        addInputDetailsAccount()
+        $wrapperContent.style.display = 'block'
+        showHideDetailsOrderContent()
+        showHideSummaryOrderContent()
+        showHideDetailsAccount()
+        showHideDetailsSend(true)
+        showHideDetailsPay(true)
+        $payConfirmContent.hidden = true
+
+    })
 }

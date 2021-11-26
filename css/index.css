@@ -3,6 +3,7 @@
 @import url('button.css');
 @import url('icon.css');
 @import url('input.css');
+@import url('pay-container.css');
 :root {
     --primary: #3182ce;
     --black: #333333;
@@ -12,6 +13,7 @@
     --white10: #f7fafc;
     --bg: #f7fafc;
     --green: #38b2ac;
+    --green10: #066952;
     --grey: #718096;
     --grey10: #E2E8F0;
     --bg-blue: #012649;
@@ -37,7 +39,7 @@ p {
 .wrapper {
     display: block;
     margin: auto;
-    margin-block: 80px;
+    /* margin-block: 80px; */
     margin-inline: 16px;
 }
 
