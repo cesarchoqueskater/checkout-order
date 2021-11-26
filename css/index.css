@@ -67,16 +67,6 @@ p {
     font: var(--body-18medium);
 }
 
-.section-account::after {
-    content: url(../icons/Minus.svg);
-    margin-inline-start: 17px;
-}
-
-.section-pay::before {
-    content: url(../icons/Minus.svg);
-    margin-inline-end: 17px;
-}
-
 .span-value::before {
     content: '$ ';
 }
@@ -128,5 +118,13 @@ p {
     .section-send::after {
         content: url(../icons/Minus.svg);
         margin-inline-start: 17px;
+    }
+    .section-account::after {
+        content: url(../icons/Minus.svg);
+        margin-inline-start: 17px;
+    }
+    .section-pay::before {
+        content: url(../icons/Minus.svg);
+        margin-inline-end: 17px;
     }
 }

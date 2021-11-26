@@ -5,11 +5,17 @@
 }
 
 .icon-check {
-    display: none;
+    width: 55px;
+    height: 1%;
+    border: 1px solid var(--primary);
 }
 
 @media screen and (min-width:1440px) {
     .icon-check {
-        display: block;
+        /* display: block; */
+        background: url('../icons/checkbox-circle-fill.svg');
+        background-repeat: no-repeat;
+        height: 100%;
+        border: none;
     }
 }
