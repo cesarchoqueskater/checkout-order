@@ -1,4 +1,4 @@
-import { subTotalValueGenerate } from './operation.js'
+import { subTotalValueGenerate } from './addMinusCountProduct.js'
 
 const $optionSelectedInformationProcessor = document.querySelectorAll('.information-processor .selection-option-label')
 const $optionSelectedInformationStorage = document.querySelectorAll('.information-storage .selection-option-label')

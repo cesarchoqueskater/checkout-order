@@ -1,5 +1,5 @@
-import { addCountProduct, substractCountProduct, setvaluePriceSecondOption, setvaluePriceThirdOption, subTotalValueGenerate } from './operation.js'
-import { selectInformationProcessor, selectInformationStorage } from './showHideContent.js'
+import { addCountProduct, substractCountProduct, setvaluePriceSecondOption, setvaluePriceThirdOption, subTotalValueGenerate } from './addMinusCountProduct.js'
+import { selectInformationProcessor, selectInformationStorage } from './showHideContentInformationExtra.js'
 import { showInputFormDetailsAccount, cleanInputFormDetailAccount, showCardDetailsSend } from './details-account.js'
 import { showCardDetailsPay } from './details-send.js'
 import { showCardPayConfirm, validateNumberCreditCard, showContinueBuytoHome } from './details-pay.js'

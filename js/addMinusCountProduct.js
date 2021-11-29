@@ -1,4 +1,4 @@
-import { arrayValuesPrice } from './showHideContent.js'
+import { arrayValuesPrice } from './showHideContentInformationExtra.js'
 
 const $btnAddProduct = document.querySelector('.btn-add')
 const $btnRemoveProduct = document.querySelector('.btn-minus')

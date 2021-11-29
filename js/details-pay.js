@@ -1,4 +1,4 @@
-import { cleanInputValue, addInputDetailsAccount, cleanAllInputValues } from './utils/components.js'
+import { cleanInputValue, addInputDetailsAccount, cleanAllInputValues } from './utils/setRemoveInput.js'
 import { showHideDetailsOrderContent, showHideSummaryOrderContent, showHideDetailsAccount, showHideDetailsSend, showHideDetailsPay } from './utils/showHideComponents.js'
 import { setRemoveAttributeNameCreditCardInput, setRemoveAttributeNumberCreditCardInput, setRemoveAttributeMonthInput, setRemoveAttributeYearInput, setRemoveAttributeCVCInput } from './utils/setRemoveAttribute.js';
 

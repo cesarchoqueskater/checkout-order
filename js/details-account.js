@@ -1,4 +1,4 @@
-import { removeInputDetailsAccount, cleanInputValue } from './utils/components.js'
+import { removeInputDetailsAccount, cleanInputValue } from './utils/setRemoveInput.js'
 import { setRemoveAttributeEmailInput, setRemoveAttributePasswordInput } from './utils/setRemoveAttribute.js'
 import { showHideDetailsAccount, showHideDetailsSend } from './utils/showHideComponents.js'
 
