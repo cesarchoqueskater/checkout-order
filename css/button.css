@@ -43,3 +43,8 @@
 .btn-login {
     opacity: 0.7;
 }
+
+.btn-minus:disabled {
+    opacity: 0.2;
+    cursor: no-drop;
+}

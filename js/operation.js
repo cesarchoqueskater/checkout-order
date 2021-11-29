@@ -26,9 +26,9 @@ export function setvaluePriceThirdOption() {
 export function addCountProduct() {
     $btnAddProduct.addEventListener('click', function() {
         console.log("Se hizo click en boton para agregar +1")
+        $btnRemoveProduct.removeAttribute('disabled')
         const countProduct = Number($valueCountProduct.textContent) + 1
         $valueCountProduct.innerText = countProduct
-
 
         const pricesCharacteristicSelected = subTotalValueGenerate()
         const valueCountFinal = (valueInitialProduct * countProduct) + pricesCharacteristicSelected.valuePriceProcessor + pricesCharacteristicSelected.valuePriceStorage
@@ -43,6 +43,7 @@ export function substractCountProduct() {
         console.log("Se hizo click en boton para restar -1")
         if (Number($valueCountProduct.textContent) == 1) {
             Number($valueCountProduct.textContent)
+            $btnRemoveProduct.setAttribute('disabled', true)
             totalProduct()
         } else {
             const countProduct = Number($valueCountProduct.textContent) - 1
@@ -62,7 +63,7 @@ export function totalProduct() {
 
 
 export function subTotalValueGenerate() {
-    console.log(arrayValuesPrice())
+    // console.log(arrayValuesPrice())
     const valuePriceProcessor = arrayValuesPrice()[0].priceProcessor
     console.log("🚀  valuePriceProcessor : ", valuePriceProcessor)
     const valuePriceStorage = arrayValuesPrice()[0].priceStorage

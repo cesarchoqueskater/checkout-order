@@ -28,6 +28,10 @@
     padding-block: 40px;
 }
 
+.content-product-name-price {
+    width: 100%;
+}
+
 .extra-information-credit-card {
     display: flex;
     flex-direction: row;
@@ -45,6 +49,12 @@
     text-align: center;
     background-color: var(--white);
     margin-block-start: 24px;
+}
+
+@media screen and (min-width:1024px) {
+    .content-product-name-price {
+        width: auto;
+    }
 }
 
 @media screen and (min-width:1440px) {

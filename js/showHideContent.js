@@ -53,4 +53,3 @@ export function selectInformationProcessor() {
 export function arrayValuesPrice() {
     return arrayPricesValuesSelected
 }
-// console.log(arrayPricesValuesSelected)
