@@ -1,4 +1,4 @@
-import { addCountProduct, substractCountProduct, setvaluePriceSecondOption, setvaluePriceThirdOption } from './operation.js'
+import { addCountProduct, substractCountProduct, setvaluePriceSecondOption, setvaluePriceThirdOption, subTotalValueGenerate } from './operation.js'
 import { selectInformationProcessor, selectInformationStorage } from './showHideContent.js'
 import { showInputFormDetailsAccount, cleanInputFormDetailAccount, showCardDetailsSend } from './details-account.js'
 import { showCardDetailsPay } from './details-send.js'
@@ -48,3 +48,6 @@ showContinueBuytoHome()
 
 // Option to back content card
 backSectionContent()
+
+// Calculate SubTotalPrice
+subTotalValueGenerate()

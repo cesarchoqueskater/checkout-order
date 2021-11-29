@@ -1,6 +1,12 @@
+import { subTotalValueGenerate } from './operation.js'
+
 const $optionSelectedInformationProcessor = document.querySelectorAll('.information-processor .selection-option-label')
 const $optionSelectedInformationStorage = document.querySelectorAll('.information-storage .selection-option-label')
 
+let informationStorageValue = 0
+let informationProcessorValue = 0
+
+const arrayPricesValuesSelected = [{ "priceProcessor": 0, "priceStorage": 0, "countProduct": 1 }]
 
 // Se remueve aria-selected
 export function removeAttributeInformationProcessor() {
@@ -24,6 +30,9 @@ export function selectInformationStorage() {
             removeAttributeInformationStorage()
             item.setAttribute('aria-selected', true)
             item.parentElement.classList.add("selection-option-border")
+            informationStorageValue = item.parentElement.querySelector('.input-radio').value
+            arrayPricesValuesSelected[0].priceStorage = Number(informationStorageValue)
+            subTotalValueGenerate()
         })
     })
 }
@@ -31,10 +40,17 @@ export function selectInformationStorage() {
 export function selectInformationProcessor() {
     $optionSelectedInformationProcessor.forEach((item) => {
         item.addEventListener('click', function() {
-            // debugger
             removeAttributeInformationProcessor()
             item.setAttribute('aria-selected', true)
             item.parentElement.classList.add("selection-option-border")
+            informationProcessorValue = item.parentElement.querySelector('.input-radio').value
+            arrayPricesValuesSelected[0].priceProcessor = Number(informationProcessorValue)
+            subTotalValueGenerate()
         })
     })
 }
+
+export function arrayValuesPrice() {
+    return arrayPricesValuesSelected
+}
+// console.log(arrayPricesValuesSelected)

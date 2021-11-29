@@ -2,9 +2,6 @@ import { cleanInputValue, addInputDetailsAccount, cleanAllInputValues } from './
 import { showHideDetailsOrderContent, showHideSummaryOrderContent, showHideDetailsAccount, showHideDetailsSend, showHideDetailsPay } from './utils/showHideComponents.js'
 import { setRemoveAttributeNameCreditCardInput, setRemoveAttributeNumberCreditCardInput, setRemoveAttributeMonthInput, setRemoveAttributeYearInput, setRemoveAttributeCVCInput } from './utils/setRemoveAttribute.js';
 
-const $detailsAccount = document.querySelector('.details-account')
-const $detailsSend = document.querySelector('.details-send')
-const $detailsPay = document.querySelector('.details-pay')
 const $payConfirmContent = document.querySelector('.pay-section')
 
 
@@ -26,7 +23,9 @@ const $resultCVC = document.querySelector('.resultCVC')
 
 const $wrapperContent = document.querySelector('.wrapper')
 const $btnContinue = document.querySelector('.btn-continue')
-const $summaryContent = document.querySelector('.summary-order-content')
+
+
+const $iconBackHeader = document.querySelector('.icon-back')
 
 export function validateNumberCreditCard() {
     $numberCreditCardInput.addEventListener('input', function(e) {
@@ -120,9 +119,7 @@ export function showCardPayConfirm() {
 }
 
 export function showContinueBuytoHome() {
-    // debugger
     $btnContinue.addEventListener('click', function() {
-        console.log("Se hizo click")
         cleanAllInputValues()
         cleanInputValue()
         addInputDetailsAccount()
@@ -132,6 +129,7 @@ export function showContinueBuytoHome() {
         showHideDetailsAccount()
         showHideDetailsSend(true)
         showHideDetailsPay(true)
+        $iconBackHeader.hidden = true
         $payConfirmContent.hidden = true
 
     })

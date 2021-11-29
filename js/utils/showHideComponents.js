@@ -12,8 +12,6 @@ const $iconBackHeader = document.querySelector('.icon-back')
 const $headerDetailsSend = document.querySelector('.section-send')
 const $headerDetailsPay = document.querySelector('.section-pay')
 
-const $icon = document.querySelector('.icon-back')
-
 export function showHideDetailsOrderContent(value) {
     if (value) {
         $detailsContent.hidden = true
@@ -80,7 +78,7 @@ export function colorTextHeaderDetailsSend(value) {
 
 export function backSectionContent() {
 
-    $icon.addEventListener('click', function() {
+    $iconBackHeader.addEventListener('click', function() {
         const $optionHeader = document.querySelector('.section-pay.text-primary')
 
         if ($optionHeader) {
